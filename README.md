@@ -69,4 +69,4 @@ Edit settings via Menu &gt; Preferences &gt; Settings:
 
 Setting                 | Description                   | Type      | Default
 :---                    | :----------                   | :---      | :------
-`goto_php_manual.path`  | Path to local PHP Manual.     | `string`  | Remote Manual.
+`goto_php_manual.path`  | Path to local PHP manual.     | `string`  | Remote manual.
