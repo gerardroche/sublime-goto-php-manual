@@ -62,3 +62,11 @@ If you want to be able to goto local manual files, [download the PHP Documentati
 ```js
 "goto_php_manual.path": "~/path/to/php/manual",
 ```
+
+## Settings
+
+Edit settings via Menu &gt; Preferences &gt; Settings:
+
+Setting                 | Description                   | Type      | Default
+:---                    | :----------                   | :---      | :------
+`goto_php_manual.path`  | Path to local PHP Manual.     | `string`  | Remote Manual.
