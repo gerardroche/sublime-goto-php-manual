@@ -10,7 +10,9 @@ Install via [Package Control](https://packagecontrol.io/packages/GotoPhpManual).
 
 ## Setup
 
-Add your preferred key bindings via Menu &gt; Preferences &gt; Key Bindings:
+Add your preferred key bindings.
+
+**Menu → Preferences → Key Bindings**
 
 ```js
 {
@@ -65,7 +67,7 @@ If you want to be able to goto local manual files, [download the PHP Documentati
 
 ## Settings
 
-Edit settings via Menu &gt; Preferences &gt; Settings:
+**Menu → Preferences → Settings**
 
 Setting                 | Description                   | Type      | Default
 :---                    | :----------                   | :---      | :------
