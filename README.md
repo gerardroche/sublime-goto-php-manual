@@ -72,3 +72,7 @@ If you want to be able to goto local manual files, [download the PHP Documentati
 Setting                 | Description                   | Type      | Default
 :---                    | :----------                   | :---      | :------
 `goto_php_manual.path`  | Path to local PHP manual.     | `string`  | Remote manual.
+
+## License
+
+Released under the [GPL-3.0-or-later License](LICENSE).
