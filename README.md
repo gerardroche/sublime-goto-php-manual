@@ -1,6 +1,10 @@
 # GotoPhpManual
 
-A Sublime Text plugin for jumping to tags in the PHP Manual.
+A Sublime Text plugin for jumping to the PHP Manual for the current symbol.
+
+Put your cursor on a PHP symbol and press <key>f1</key> to open a local PHP manual in your browser (if you've downloaded one) and <key>shift+f1</key> to open the remote PHP manual in your browser.
+
+Handy if you need the PHP Manual when working offline.
 
 ## Installation
 
