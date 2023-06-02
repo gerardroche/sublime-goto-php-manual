@@ -37,15 +37,16 @@ If you use the [GotoDocumentation](https://packagecontrol.io/packages/GotoDocume
 },
 ```
 
-If you use [NeoVintageous](https://packagecontrol.io/packages/NeoVintageous), disable the `F1` key. Read the [NeoVintageous vim key handler](https://blog.gerardroche.com/2022/09/22/neovintageous-key-handler/) for details on configuring the NeoVintageous vim key handler.
+If you use [NeoVintageous](https://packagecontrol.io/packages/NeoVintageous), disable the `F1` and `Shift+F1` keys. Read the [NeoVintageous vim key handler](https://blog.gerardroche.com/2022/09/22/neovintageous-key-handler/) for details on configuring the NeoVintageous vim key handler.
 
 Menu → Preferences → Settings
 
 ```js
-"vintageous_handle_keys":
-{
-    "<f1>": false
-},
+    "vintageous_handle_keys":
+    {
+        "<f1>": false,
+        "<S-f1>": false,
+    },
 ```
 
 ## Key Bindings
