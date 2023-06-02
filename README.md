@@ -1,4 +1,4 @@
-# GotoPhpManual
+# Goto PHP Manual
 
 A Sublime Text plugin for jumping to the PHP Manual for the current symbol.
 
