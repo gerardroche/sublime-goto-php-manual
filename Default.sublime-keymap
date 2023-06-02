@@ -1,0 +1,33 @@
+[
+    {
+        "keys": ["f1"],
+        "command": "goto_php_manual",
+        "context": [
+            {
+                "key": "setting.goto_php_manual.keymaps"
+            },
+            {
+                "key": "selector",
+                "operator": "equal",
+                "operand": "embedding.php",
+                "match_all": true
+            }
+        ]
+    },
+    {
+        "keys": ["shift+f1"],
+        "command": "goto_php_manual",
+        "args": {"remote": true},
+        "context": [
+            {
+                "key": "setting.goto_php_manual.keymaps"
+            },
+            {
+                "key": "selector",
+                "operator": "equal",
+                "operand": "embedding.php",
+                "match_all": true
+            }
+         ]
+    }
+]

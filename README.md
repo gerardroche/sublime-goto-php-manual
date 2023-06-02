@@ -2,51 +2,25 @@
 
 A Sublime Text plugin for jumping to the PHP Manual for the current symbol.
 
-Put your cursor on a PHP symbol and press <key>f1</key> to open a local PHP manual in your browser or <key>shift+f1</key> to open the remote PHP manual in your browser.
+Put your cursor on a php symbol and press `f1` or `shift+f1` to open the php manual in your browser.
 
-Handy if you need the PHP Manual when working offline.
+Handy if you need the php manual when working offline.
 
 ## Installation
 
-**Pending availability in Package Control.**
-
-Install via [Package Control](https://packagecontrol.io/packages/GotoPhpManual).
+Install [GotoPhpManual](https://packagecontrol.io/packages/GotoPhpManual) via Package Control.
 
 ## Setup
 
-Add your preferred key bindings.
+### Local PHP Manual
 
-**Menu → Preferences → Key Bindings**
+To use a local php manual, [download the manual](https://www.php.net/download-docs.php), the "Many HTML files" tarball, unpack it somewhere, and set the location:
 
 ```js
-{
-    "keys": ["f1"],
-    "command": "goto_php_manual",
-    "context": [
-        {
-            "key": "selector",
-            "operator": "equal",
-            "operand": "embedding.php",
-            "match_all": true
-        }
-    ]
-},
-{
-    "keys": ["shift+f1"],
-    "command": "goto_php_manual",
-    "args": {"remote": true},
-    "context": [
-        {
-            "key": "selector",
-            "operator": "equal",
-            "operand": "embedding.php",
-            "match_all": true
-        }
-     ]
-},
+"goto_php_manual.path": "~/manuals/php",
 ```
 
-If you use the GotoDocumentation plugin, exclude the PHP scope:
+If you use the [GotoDocumentation](https://packagecontrol.io/packages/GotoDocumentation) plugin and use `F1` for it, then add a context exclude for PHP scope: Menu → Preferences → Key Bindings:
 
 ```js
 {
@@ -63,19 +37,30 @@ If you use the GotoDocumentation plugin, exclude the PHP scope:
 },
 ```
 
-If you want to be able to goto local manual files, [download the PHP Documentation](https://www.php.net/download-docs.php) and set the location:
+If you use [NeoVintageous](https://packagecontrol.io/packages/NeoVintageous), disable the `F1` key. Read the [NeoVintageous vim key handler](https://blog.gerardroche.com/2022/09/22/neovintageous-key-handler/) for details on configuring the NeoVintageous vim key handler.
 
 ```js
-"goto_php_manual.path": "~/path/to/php/manual",
+"vintageous_handle_keys":
+{
+    "<f1>": false
+},
 ```
+
+## Key Bindings
+
+Key        | Description
+:----------|:-----------
+`F1`       | Goto local manual or remote manual.
+`Shift+F1` | Goto remote manual
 
 ## Settings
 
 **Menu → Preferences → Settings**
 
-Setting                 | Description                   | Type      | Default
-:---                    | :----------                   | :---      | :------
-`goto_php_manual.path`  | Path to local PHP manual.     | `string`  | Remote manual.
+Setting                   | Description               | Type     | Default
+:-------------------------|:--------------------------|:--------:|:-------:
+`goto_php_manual.path`    | Path to local php manual. | `string` | `null`
+`goto_php_manual.keymaps` | Enable keymaps.           | `bool`   | `true`
 
 ## License
 
