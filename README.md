@@ -39,6 +39,8 @@ If you use the [GotoDocumentation](https://packagecontrol.io/packages/GotoDocume
 
 If you use [NeoVintageous](https://packagecontrol.io/packages/NeoVintageous), disable the `F1` key. Read the [NeoVintageous vim key handler](https://blog.gerardroche.com/2022/09/22/neovintageous-key-handler/) for details on configuring the NeoVintageous vim key handler.
 
+Menu → Preferences → Settings
+
 ```js
 "vintageous_handle_keys":
 {
