@@ -20,7 +20,7 @@ To use a local php manual, [download the manual](https://www.php.net/download-do
 "goto_php_manual.path": "~/manuals/php",
 ```
 
-If you use the [GotoDocumentation](https://packagecontrol.io/packages/GotoDocumentation) plugin and use `F1` for it, then add a context exclude for PHP scope: Menu → Preferences → Key Bindings:
+If you use the [GotoDocumentation](https://packagecontrol.io/packages/GotoDocumentation) plugin and use `f1` for it, then add a context exclude for PHP scope: Menu → Preferences → Key Bindings:
 
 ```js
 {
@@ -37,24 +37,25 @@ If you use the [GotoDocumentation](https://packagecontrol.io/packages/GotoDocume
 },
 ```
 
-If you use [NeoVintageous](https://packagecontrol.io/packages/NeoVintageous), disable the `F1` and `Shift+F1` keys. Read the [NeoVintageous vim key handler](https://blog.gerardroche.com/2022/09/22/neovintageous-key-handler/) for details on configuring the NeoVintageous vim key handler.
+If you use [NeoVintageous](https://packagecontrol.io/packages/NeoVintageous), disable the `f1` and `shift+f1` keys.
 
 Menu → Preferences → Settings
 
 ```js
-    "vintageous_handle_keys":
-    {
-        "<f1>": false,
-        "<S-f1>": false,
-    },
+"vintageous_handle_keys": {
+    "<f1>": false,
+    "<S-f1>": false,
+},
 ```
+
+Read [configuring the NeoVintageous sublime vim key handler](https://blog.gerardroche.com/2022/09/22/neovintageous-key-handler/) for a short guide on configuring the vim key handler in sublime.
 
 ## Key Bindings
 
 Key        | Description
 :----------|:-----------
-`F1`       | Goto local manual or remote manual.
-`Shift+F1` | Goto remote manual
+`f1`       | Goto local manual or remote manual.
+`shift+f1` | Goto remote manual
 
 ## Settings
 
