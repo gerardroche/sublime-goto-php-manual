@@ -45,7 +45,7 @@ class GotoPhpManualCommand(sublime_plugin.WindowCommand):
             self.goto_local(path, symbol)
 
     def goto_remote(self, symbol: str) -> None:
-        webbrowser.open_new_tab('https://secure.php.net/%s' % symbol)
+        webbrowser.open_new_tab('https://www.php.net/%s' % symbol)
 
     def goto_local(self, path: str, symbol: str) -> None:
         # https://secure.php.net/urlhowto.php
