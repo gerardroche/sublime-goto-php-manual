@@ -49,11 +49,11 @@ class GotoPhpManualCommand(sublime_plugin.WindowCommand):
 
     def goto_local(self, path: str, symbol: str) -> None:
         # https://secure.php.net/urlhowto.php
-        _open_file_in_browser('%s/php/language.types.%s.html' % (path, symbol))
-        _open_file_in_browser('%s/php/control-structures.%s.html' % (path, symbol))
-        _open_file_in_browser('%s/php/book.%s.html' % (path, symbol))
-        _open_file_in_browser('%s/php/class.%s.html' % (path, symbol))
-        _open_file_in_browser('%s/php/function.%s.html' % (path, symbol))
+        _open_file_in_browser('%s/language.types.%s.html' % (path, symbol))
+        _open_file_in_browser('%s/control-structures.%s.html' % (path, symbol))
+        _open_file_in_browser('%s/book.%s.html' % (path, symbol))
+        _open_file_in_browser('%s/class.%s.html' % (path, symbol))
+        _open_file_in_browser('%s/function.%s.html' % (path, symbol))
 
 
 def _get_symbol(view):
