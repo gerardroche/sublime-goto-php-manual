@@ -1,26 +1,42 @@
 # Goto PHP Manual
 
-A Sublime Text plugin for jumping to the PHP Manual for the current symbol.
+A Sublime Text commands that open the PHP Manual for a keyword or symbol.
 
-Put your cursor on a php symbol and press `f1` or `shift+f1` to open the php manual in your browser.
+## How to use
 
-Handy if you need the php manual when working offline.
+Place your cursor on a PHP keyword or symbol and press `f1` to open the **local PHP manual** (if configured), or `shift+f1` to open the **online PHP manual**.
 
-## Installation
+## How to setup a local PHP Manual
 
-Install [GotoPhpManual](https://packagecontrol.io/packages/GotoPhpManual) via Package Control.
+Download the [PHP manual](https://www.php.net/download-docs.php), pick the "many HTML files" tar.gz, and unpack it.
 
-## Setup
+Set the PHP manual path of your unpacked local manual.
 
-### Local PHP Manual
-
-To use a local php manual, [download the manual](https://www.php.net/download-docs.php), the "Many HTML files" tarball, unpack it somewhere, and set the location:
+> Command Palette → Preferences: Settings
 
 ```js
-"goto_php_manual.path": "~/manuals/php",
+"goto_php_manual.path": "~/php-manual/php-chunked-xhtml",
+```
+## If you use NeoVintageous
+
+Disable the `f1` and `shift+f1` keys.
+
+> Command Palette → Preferences: Settings
+
+```js
+"vintageous_handle_keys": {
+    "<f1>": false,
+    "<S-f1>": false,
+},
 ```
 
-If you use the [GotoDocumentation](https://packagecontrol.io/packages/GotoDocumentation) plugin and use `f1` for it, then add a context exclude for PHP scope: Menu → Preferences → Key Bindings:
+For more information on configuring NeoVintageous see [configuring the NeoVintageous key handler](https://blog.gerardroche.com/2022/09/22/neovintageous-key-handler/).
+
+## If you use GotoDocumentation
+
+If you use [GotoDocumentation](https://packagecontrol.io/packages/GotoDocumentation) and also use the `f1` key binding, then add a context *exclude* for the PHP scope so that `f1` passes through to Goto PHP Manual.
+
+> Command Palette → Preferences → Key Bindings
 
 ```js
 {
@@ -37,34 +53,25 @@ If you use the [GotoDocumentation](https://packagecontrol.io/packages/GotoDocume
 },
 ```
 
-If you use [NeoVintageous](https://packagecontrol.io/packages/NeoVintageous), disable the `f1` and `shift+f1` keys.
-
-Menu → Preferences → Settings
-
-```js
-"vintageous_handle_keys": {
-    "<f1>": false,
-    "<S-f1>": false,
-},
-```
-
-Read [configuring the NeoVintageous sublime vim key handler](https://blog.gerardroche.com/2022/09/22/neovintageous-key-handler/) for a short guide on configuring the vim key handler in sublime.
-
 ## Key Bindings
 
 Key        | Description
 :----------|:-----------
-`f1`       | Goto local manual or remote manual.
-`shift+f1` | Goto remote manual
+`f1`       | Open local PHP manual with fallback to online PHP manual.
+`shift+f1` | Open online PHP manual.
 
 ## Settings
 
-**Menu → Preferences → Settings**
+**Command Palette → Preferences: Settings**
 
 Setting                   | Description               | Type     | Default
 :-------------------------|:--------------------------|:--------:|:-------:
 `goto_php_manual.path`    | Path to local php manual. | `string` | `null`
 `goto_php_manual.keymaps` | Enable keymaps.           | `bool`   | `true`
+
+## Installation
+
+Install [GotoPhpManual](https://packagecontrol.io/packages/GotoPhpManual) via Package Control.
 
 ## License
 
